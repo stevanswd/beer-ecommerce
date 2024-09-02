@@ -105,4 +105,4 @@ The frontend is located in the `beer-ecommerce-frontend` folder and uses React f
 ### Frontend
 
 - **Port**: 3000
-- **SASS**: Compiled to `index.css` in the `src/styles` directory
+- **SASS**: Compiled to `index.css` in the `src` directory
