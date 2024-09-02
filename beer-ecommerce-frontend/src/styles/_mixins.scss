@@ -1,0 +1,155 @@
+@mixin card-style {
+  gap: 0px;
+  border-radius: 12px 32px 12px 12px;
+  background-color: $card-background-color;
+  text-align: center;
+  position: relative;
+  color: $text-color;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .view-details {
+      background-color: $secondary-color !important;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+
+  img {
+    max-height: 122px;
+  }
+
+  .card-info {
+    .price {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 16px;
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .view-details {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px 0px 8px 0px;
+      background-color: $primary-color;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      color: #fff;
+      text-decoration: none;
+      font-size: 30px;
+      transition: all 0.2s ease;
+    }
+  }
+}
+
+@mixin product-detail {
+  .container-image {
+    display: flex;
+    background-color: #fafafa;
+
+    img {
+      height: 240px;
+      margin: auto;
+      padding: 20px 0;
+    }
+  }
+
+  .container-information {
+    padding: 20px;
+    border-radius: 48px 48px 0px 0px;
+    background-color: $card-background-color;
+
+    h1 {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 31.25px;
+
+      .price {
+        color: $primary-color;
+      }
+    }
+
+    .stock {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18.23px;
+      color: $list-color;
+      display: block;
+      margin-bottom: 25px;
+    }
+
+    .information {
+      h2 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20.83px;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+
+        li {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18.23px;
+          color: $list-color;
+          padding: 6px 12px;
+          border: 1px solid $list-color;
+          border-radius: 15.5px;
+
+          &.active {
+            color: $primary-color;
+            border: 1px solid $primary-color;
+          }
+        }
+      }
+    }
+
+    .card-information {
+      margin: 40px 0;
+      display: flex;
+      justify-content: space-between;
+
+      .card-icon {
+
+      }
+
+      .card-btn {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        color: #fff;
+        background-color: $primary-color;
+        padding: 0 80px;
+        border: 0;
+        border-radius: 12px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $secondary-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "beer-ecommerce",
+  "version": "1.0.0",
+  "author": "John Stevans Alvarez",
+  "description": "Beer E-commerce Challenge",
+  "scripts": {
+    "start:frontend": "cd beer-ecommerce-frontend && npm start",
+    "start:backend": "cd beer-ecommerce-backend && npm start",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "install:all": "npm install && npm install --prefix beer-ecommerce-frontend && npm install --prefix beer-ecommerce-backend",
+    "compile:sass": "cd beer-ecommerce-frontend && npm run compile:sass",
+    "watch:sass": "cd beer-ecommerce-frontend && npm run watch:sass"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.2"
+  }
+}

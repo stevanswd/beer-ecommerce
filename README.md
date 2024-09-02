@@ -20,6 +20,10 @@ This project consists of a frontend built with React and a backend using Node.js
       - App.js
       - index.css
       - index.js
+      - /components
+        - Header.js
+        - ProductCard.js
+        - ProductDetail.js
       - /pages
         - HomePage.js
         - ProductDetailsPage.js

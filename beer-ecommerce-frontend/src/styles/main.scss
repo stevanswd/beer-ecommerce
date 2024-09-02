@@ -1,0 +1,93 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+header {
+  padding: 20px;
+  //position: sticky;
+  //top: 0;
+  //background-color: $background-color;
+  //box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+
+    .detail {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 23.44px;
+    }
+
+    img {
+      cursor: pointer;
+      max-width: 40px;
+      height: 40px;
+
+      &.menu:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+      }
+
+      &.user {
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.product-listing {
+  .greeting {
+    font-size: 16px;
+    color: $highlight-color;
+    margin: 0;
+  }
+  .welcome {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.25px;
+    margin-top: 0;
+  }
+  .our-products {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.44px;
+  }
+
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+
+    .product-card {
+      @include card-style;
+    }
+  }
+}
+
+.product-detail {
+  @include product-detail;
+}
+
+.loading {
+  text-align: center;
+  font-size: 22px;
+  padding: 40px 20px;
+  animation: loading-animation 1s linear infinite alternate;
+}
+@keyframes loading-animation {to{opacity: 0}}
